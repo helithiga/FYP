@@ -1,0 +1,21 @@
+import nltk 
+
+nltk.download('punkt')
+
+nltk.download('averaged_perceptron_tagger')
+
+question1 = "What is known about transmission, incubation, and environmental stability?"
+question2 = "What do we know about COVID-19 risk factors?"
+
+tokens1 = nltk.word_tokenize(question1)
+tokens2 = nltk.word_tokenize(question2)
+
+tagges1 = nltk.pos_tag(tokens1)
+tagges2 = nltk.pos_tag(tokens2)
+
+print('Question 1',tokens1)
+print(tagges1)
+print('Question 2',tokens2)
+print(tagges2)
+
+print(tagges1[0][1])
